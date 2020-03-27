@@ -21,7 +21,7 @@ extern void sel_pll1_sw_clk(int sel_pll1);
 
 /* 从CLKO1和CLKO2引脚输出时钟信号进行测试 */
 extern void setup_clock_output(void);
-
+#include "uart.h"
 #include "my_printf.h"
 
 /**********************************************************************
@@ -91,7 +91,7 @@ void main(void)
     int blinks = 0;
     led_init();
     led_on();
-
+    Uart_Init();
     /* 默认不开启输出时钟信号，有条件的同学可以尝试输出并测量 */
     //setup_clock_output();
 
