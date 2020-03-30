@@ -8,7 +8,7 @@ OBJDUMP=$(PREFIX)objdump
 INCLUDEDIR 	:= $(shell pwd)/include
 CFLAGS 		:= -Wall
 CPPFLAGS   	:= -nostdinc -fno-builtin -I$(INCLUDEDIR)
-LDFLAGS         := -L /home/book/work/100ask_imx6ull-sdk/ToolChain/gcc-linaro-6.2.1-2016.11-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/6.2.1/ -lgcc
+LDFLAGS         := -L /home/book/100ask_imx6ull-sdk/ToolChain/gcc-linaro-6.2.1-2016.11-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/6.2.1/ -lgcc
 objs :=  start.o main.o led.o uart.o eabi_compat.o my_printf.o gic.o
 
 TARGET := except
